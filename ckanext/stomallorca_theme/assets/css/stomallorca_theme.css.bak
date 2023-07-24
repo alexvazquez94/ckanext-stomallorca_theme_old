@@ -312,7 +312,7 @@ a.nav-link {
 }
 
 a.nav-link-active:link, a.nav-link-active:visited, a.nav-link-active:hover, a.nav-link-active:active { 
-  color: rgb(90,142,34) !important;
+  color: rgb(90,142,34); 
 } 
 
 button.navbar-toggler {
