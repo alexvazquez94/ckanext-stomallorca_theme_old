@@ -1,5 +1,5 @@
 {
-    "scheming_version": 2,
+    "scheming_version": 1,
     "about_url": "http://github.com/ckan/ckanext-scheming",
     "type": "organization",
     "organization_type": "organization",
@@ -7,62 +7,27 @@
     "fields": [
         {
           "field_name": "title_translated",
-          "label": {
-            "es": "Nombre",
-            "ca": "Nom"
-          },
+          "label": "Name",
           "preset": "fluent_core_translated",
           "form_snippet": "extrafields_fluent_title.html",
-          "classes": ["col-md-12","form-group"],
-          "mark_required": true,
-          "form_placeholder":  {
-            "es": "Organización",
-            "ca": "Organització"
-          }
-        },
-        {
-          "field_name": "title",
-          "label": "Name",
-          "validators": "ignore_missing unicode_safe",
-          "form_snippet": "large_text.html",
-          "form_attrs": {"data-module": "slug-preview-target"},
-          "form_placeholder": "My Organization",
           "classes": ["col-md-12","form-group"],
           "mark_required": true
         },
         {
           "field_name": "name",
           "label": "URL",
-          "classes": ["col-md-12","form-group"],
           "preset": "dataset_slug",
           "form_placeholder": "eg. my-organization"
         },
-        
         {
           "field_name": "description_translated",
-          "label": {
-            "es": "Descripción",
-            "ca": "Descripció"
-          },
+          "label": "Description",
           "preset": "fluent_core_translated",
           "classes": ["col-md-12","form-group"],
-          "form_snippet": "fluent_markdown.html",
-          "form_placeholder": {
-            "es": "Descripción...",
-            "ca": "Descripció..."
-          }
-        },
-        {
-          "field_name": "description",
-          "label": "Description",
-          "classes": ["col-md-12","form-group"],
-          "form_snippet": "markdown.html",
-          "form_placeholder": "Description..."
+          "form_snippet": "fluent_markdown.html"
         },
         {
           "field_name": "image_url",
-          "label": "URL logo",
-          "classes": ["col-md-12","form-group"],
           "validators": "ignore_missing unicode_safe remove_whitespace",
           "form_snippet": "organization_upload.html"
         }

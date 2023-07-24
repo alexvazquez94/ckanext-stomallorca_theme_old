@@ -5,10 +5,10 @@
   "about_url": "http://github.com/ckan/ckanext-scheming",
   "fields": [
     {
-      "field_name": "name_translated",
+      "field_name": "title_translated",
       "label": {
         "en": "Name",
-        "ca": "Nom"
+        "fr": "Nom"
       },
       "preset": "fluent_core_translated",
       "form_snippet": "extrafields_fluent_title.html",
@@ -16,7 +16,7 @@
       "classes": ["col-md-12","form-group"]
     },
     {
-      "field_name": "slug_translated",
+      "field_name": "name",
       "label": "URL",
       "validators": "not_empty unicode_safe name_validator group_name_validator",
       "form_snippet": "slug.html",
@@ -27,7 +27,7 @@
       "field_name": "description_translated",
       "label": {
         "en": "Description",
-        "ca": "Descripció"
+        "fr": "La description"
       },
       "help_inline" : true,
       "preset": "fluent_core_translated",
