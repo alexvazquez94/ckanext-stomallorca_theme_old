@@ -3,6 +3,7 @@ dataset_type: dataset
 about: A reimplementation of the default CKAN dataset schema
 about_url: http://github.com/ckan/ckanext-scheming
 
+
 dataset_fields:
 
 - field_name: title_translated
@@ -14,12 +15,15 @@ dataset_fields:
   mark_required: true
   form_placeholder: eg. A descriptive title
   form_snippet: extrafields_fluent_title.html
-  
+
+
 - field_name: name
   label: URL
   preset: dataset_slug
   form_placeholder: eg. my-dataset
-  
+
+
+
 - field_name: notes_translated
   label: Description
   preset: fluent_core_translated
@@ -28,7 +32,9 @@ dataset_fields:
   classes:
   - form-group
   - col-md-12
-  
+
+
+
 - field_name: data_birth_date
   label:
     en: Date of publication
@@ -42,7 +48,9 @@ dataset_fields:
   preset: date
   validators: ignore_missing isodate convert_to_json_if_date
   form_placeholder: dd-mm-yyyy
-  
+
+
+
 - field_name: data_last_updated
   label: 
     en: Date of last data modification
@@ -56,7 +64,9 @@ dataset_fields:
   preset: date
   validators: ignore_missing isodate convert_to_json_if_date
   form_placeholder: dd-mm-yyyy
-  
+
+
+
 - field_name: update_frequency
   label: 
     en: Data update frequency
@@ -108,33 +118,38 @@ dataset_fields:
       en: Quaterly
       ca: Trimestralment
       es: Trimestralmente
-  - value: biennial
+  - value: binanually
     label:
-      en: Biennial
-      ca: Biennal
-      es: Bienal
-      
+      en: Biannually
+      ca: Bianual
+      es: Bianual
+
 - field_name: tag_string
-  label: 
-    en: Tags
-    es: Etiquetas
-    ca: Etiquetes
-  preset: ogdch_fluent_tags
+  label: Tags
+  preset: tag_string_autocomplete
   form_placeholder: eg. economy, mental health, government
-  
+
 - field_name: license_id
   label: License
   form_snippet: license.html
   help_text: License definitions and additional information can be found at http://opendefinition.org/
+
 - field_name: owner_org
   label: Organization
   preset: dataset_organization
+
 - field_name: source
   label: 
    en: Source/s
    es: Fuente/s
    ca: Font/s
   form_placeholder: IBESTAT
+
+#- field_name: version
+#  label: Version
+#  validators: ignore_missing unicode_safe package_version_validator
+#  form_placeholder: '1.0'
+
 
 - field_name: author
   label:
@@ -143,6 +158,7 @@ dataset_fields:
     es: Organismo propietario/responsable
   form_placeholder: Joe Bloggs
   display_property: dc:creator
+
 - field_name: additional_notes
   label: 
    en: Observations/notes additionals
@@ -155,28 +171,42 @@ dataset_fields:
   - form-group
   - col-md-12
 
+#- field_name: author_email
+#  label: Author Email
+#  form_placeholder: joe@example.com
+#  display_property: dc:creator
+#  display_snippet: email.html
+#  display_email_name_field: author
+
+#- field_name: maintainer
+#  label: Maintainer
+#  form_placeholder: Joe Bloggs
+#  display_property: dc:contributor
+
+#- field_name: maintainer_email
+#  label: Maintainer Email
+#  form_placeholder: joe@example.com
+#  display_property: dc:contributor
+#  display_snippet: email.html
+#  display_email_name_field: maintainer
+
+
+
 resource_fields:
+
 - field_name: url
   label: URL
   preset: resource_url_upload
-  
-- field_name: name_translated
-  label: 
-    en: Name
-    es: Nombre
-    ca: Nom
-  preset: fluent_core_translated
+
+- field_name: name
+  label: Name
   form_placeholder: eg. January 2011 Gold Prices
-  
-- field_name: description_translated
-  label: 
-    en: Description
-    es: Descripción
-    ca: Descripció
-  preset: fluent_core_translated
-  form_snippet: fluent_markdown.html
+
+- field_name: description
+  label: Description
+  form_snippet: markdown.html
   form_placeholder: Some useful notes about the data
-  
+
 - field_name: format
   label: Format
   preset: resource_format_autocomplete
