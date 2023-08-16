@@ -1,7 +1,7 @@
 {
   "scheming_presets_version": 1,
-  "about": "these are the default scheming field presets",
-  "about_url": "http://github.com/open-data/ckanext-scheming#preset",
+  "about": "Custom presets for STO Mallorca's extension",
+  "about_url": "https://stomallorca.com/datos-abiertos",
   "presets": [
     {
       "preset_name": "title",
@@ -108,7 +108,7 @@
       "preset_name": "ogdch_resource_format_autocomplete",
       "values": {
         "validators": "ignore_missing clean_format unicode",
-        "form_placeholder": "Kein Format",
+        "form_placeholder": "Sin formato",
         "form_attrs": {
           "data-module": "autocomplete",
           "data-module-source": "/api/2/util/resource/format_autocomplete?incomplete=?"
